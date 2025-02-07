@@ -48,7 +48,7 @@ export default function Navbar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/">
+              <Link href="/Work">
                 <Button variant="outline" className="w-full h-full">
                   <div className="flex flex-row items-center space-x-2">
                     <BriefcaseBusiness />
