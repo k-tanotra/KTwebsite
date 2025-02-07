@@ -46,7 +46,7 @@ export default function Introduction() {
             Below, I`ve shared a bit more about what I love to do in my free time. Click the button below to find out more!
           </p>
             <Button variant="secondary" className=' p-3 m-7' onClick={scrollToHobbies}>
-            <ChevronDown className='h-[20px] w-[20px]' />
+            <ChevronDown className='h-[20px] w-[20px]' /> Scroll to Hobbies
             </Button>
         </div>
       </div>
