@@ -1,6 +1,6 @@
 import React from 'react'
 import ExperienceCard from './ExperienceCard'
-import { Briefcase,ArrowBigRight} from 'lucide-react';
+import { Briefcase,ArrowBigRight, Eye} from 'lucide-react';
 import { Button } from "../ui/button";
 import Link from 'next/link';
 const data = [{
@@ -62,6 +62,13 @@ export default function Experience() {
   return (
     <div className='flex flex-col items-center justify-center  p-5 rounded-2xl'>
         <div className='flex flex-rows items-center justify-center space-x-[20px] sm:text-[30px] text-[20px] font-bold pb-10'> <Briefcase className='h-[30px] w-[30px]' /> <h1>Professional Experience </h1></div>
+        <div>
+        <Link href='/ViewResume'>
+              <Button className='text-xl p-5 m-5'>
+                <Eye /> View Resume
+              </Button>
+            </Link>
+        </div>
         <div>
         {data.map((d, index) => (
           <ExperienceCard key={index} data={d}/>
