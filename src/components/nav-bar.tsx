@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { User, BriefcaseBusiness, GraduationCap, Phone, Menu, X } from 'lucide-react';
+import { User, BriefcaseBusiness, GraduationCap, Phone, Menu, X,House } from 'lucide-react';
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { ModeToggle } from "@/components/theme-toogle";
@@ -19,7 +19,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="relative flex justify-between items-center p-4">
+    <div className="relative flex justify-between items-center p-4 " suppressHydrationWarning>
       <ModeToggle />
       <div className="flex items-center space-x-4">
         <button onClick={toggleMenu} className="sm:hidden">
@@ -27,8 +27,18 @@ export default function Navbar() {
         </button>
         <NavigationMenu className={`${isOpen ? "block" : "hidden"} sm:flex absolute top-full right-0 bg-opacity-10 sm:static sm:bg-transparent`}>
           <NavigationMenuList className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <NavigationMenuItem>
+          <NavigationMenuItem>
               <Link href="/">
+                <Button variant="outline" className="w-full h-full">
+                  <div className="flex flex-row items-center space-x-2">
+                    <House />
+                    <h1>Home</h1>
+                  </div>
+                </Button>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/AboutMe">
                 <Button variant="outline" className="w-full h-full">
                   <div className="flex flex-row items-center space-x-2">
                     <User />
