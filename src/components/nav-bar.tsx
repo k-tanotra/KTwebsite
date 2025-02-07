@@ -25,7 +25,7 @@ export default function Navbar() {
         <button onClick={toggleMenu} className="sm:hidden">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-        <NavigationMenu className={`${isOpen ? "block" : "hidden"} sm:flex absolute top-full right-0 bg-[rgba(0,0,0,0.0.05)] sm:static sm:bg-transparent`}>
+        <NavigationMenu className={`${isOpen ? "block" : "hidden"} sm:flex absolute top-full right-0 bg-opacity-10 sm:static sm:bg-transparent`}>
           <NavigationMenuList className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <NavigationMenuItem>
               <Link href="/">
